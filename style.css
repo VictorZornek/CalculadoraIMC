@@ -9,12 +9,12 @@
 
     /* cores */
     --tt-heading: #0C3440;
-    
+
     --tt-label: #00453A;
     --tt-input: #212529;
     --ot-input: #02799D;
     --bd-input: rgba(73, 80, 87, 0.3);
-    --tt-placegolder: rgba(73, 80, 87, 0.5);
+    --tt-placeholder: rgba(73, 80, 87, 0.5);
 
     --tt-button: white;
     --bg-button: #02799D;
@@ -44,3 +44,44 @@ body {
     box-shadow: 0 .2rem .4rem rgba(0,0,0,0.1);
     border-radius: .6rem;
 }
+
+.title {
+    font-size: 3.2rem;
+    line-height: 4rem;
+    color: var(--tt-heading);
+}
+
+form h1 {
+    margin-bottom: 3.2rem;
+}
+
+form label {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--tt-label);
+    margin-bottom: .8rem;
+    display: block; /* Usar essa propriedade pois display: inline; não aceita margin */
+}
+
+form input {
+    width: 100%;
+    border: 1px solid var(--bd-input);
+    background-color: #DCE2E9; 
+    padding: 1.6rem;
+    border-radius: .4rem;
+}
+
+form input:focus {
+    outline: 2px solid var(--ot-input);
+}
+
+form input::placeholder {
+    color: var(--tt-placeholder);
+}
+
+.input-wrapper + .input-wrapper { /* para aplicar margin em um .input-wrapper que tenha um .input-wrapper anterior a ele */
+    margin-top: 1.6rem;
+}
+
+
+
